@@ -1,57 +1,89 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { color, space } from 'styled-system'
+
+import condeLogo from './logos/conde.svg'
+import vogueLogo from './logos/vogue.svg'
+import stickermuleLogo from './logos/stickermule.svg'
+import riotGamesLogo from './logos/riotGames.svg'
+import wsjLogo from './logos/wsj.svg'
+import ghostLogo from './logos/ghost.svg'
+import stylistLogo from './logos/stylist.svg'
+import ribajLogo from './logos/ribaj.svg'
+import teachactiveLogo from './logos/teachactive.svg'
 
 const clientsBranding = {
   vogue: {
     title: 'Vogue',
     url: 'https://www.vogue.co.uk',
-    logo: '/logos/vogue.svg'
+    logo: vogueLogo
   },
   conde: {
     title: 'Condé Nast',
     url: 'https://www.condenast.com',
-    logo: '/logos/conde.svg'
+    logo: condeLogo
   },
   stickermule: {
     title: 'Sticker Mule',
     url: 'https://www.stickermule.com',
-    logo: '/logos/stickermule.svg'
+    logo: stickermuleLogo
   },
   riotGames: {
     title: 'Riot Games',
     url: 'https://www.riotgames.com',
-    logo: '/logos/riotGames.svg'
+    logo: riotGamesLogo
   },
   wsj: {
     title: 'WSJ+',
     url: 'https://www.wsjplus.com',
-    logo: '/logos/wsj.svg'
+    logo: wsjLogo
   },
   ghost: {
     title: 'Ghost',
     url: 'https://ghost.org',
-    logo: '/logos/ghost.svg'
+    logo: ghostLogo
   },
   stylist: {
     title: 'Stylist',
     url: 'https://www.stylist.co.uk',
-    logo: '/logos/stylist.svg'
+    logo: stylistLogo
   },
   ribaj: {
     title: 'RIBA Journal',
     url: 'https://www.ribaj.com/',
-    logo: '/logos/ribaj.svg'
+    logo: ribajLogo
   },
   teachactive: {
     title: 'Teach Active',
     url: 'https://www.teachactive.org',
-    logo: '/logos/teachactive.svg'
+    logo: teachactiveLogo
   }
 }
 
-const ClientLogo = styled.img`
+const flicker = keyframes`
+  0%    { opacity: 1;   }
+  3%    { opacity: 0.4; }
+  6%    { opacity: 1;   }
+  7%    { opacity: 0.4; }
+  8%    { opacity: 1;   }
+  9%    { opacity: 0.4; }
+  10%   { opacity: 1;   }
+  100%  { opacity: 1;   }
+`
+
+const ClientLogo = styled.div`
   width: 100%;
-  ${space}
+
+  svg {
+    width: 100%;
+    fill: ${({ theme }) => theme.colors.white };
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+
+  &:hover svg {
+    fill: ${({ theme }) => theme.colors.gold };
+    opacity: 1;
+  }
 `
 
 const ClientLink = styled.a`
@@ -63,8 +95,13 @@ const ClientLink = styled.a`
 export const Client = ({
   client,
   children
-}) => (
+}) => {
+  const Logo = clientsBranding[client].logo
+  return (
   <ClientLink href={clientsBranding[client].url} p={4}>
-    <ClientLogo src={clientsBranding[client].logo} alt={clientsBranding[client].title}/>
+    <ClientLogo>
+      <Logo />
+    </ClientLogo>
   </ClientLink>
 )
+}
