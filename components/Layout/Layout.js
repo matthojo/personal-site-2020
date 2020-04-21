@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color, flexbox, space } from 'styled-system'
+import { color, flexbox, space, typography } from 'styled-system'
 
 export const Flex = styled.div`
   display: flex;
@@ -15,4 +15,5 @@ export const Container = styled.div`
   max-width: ${({theme}) => theme.width.large};
   margin: 0 auto;
   ${space}
+  ${typography}
 `

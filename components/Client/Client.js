@@ -81,7 +81,6 @@ const ClientLogo = styled.div`
   }
 
   &:hover svg {
-    fill: ${({ theme }) => theme.colors.gold };
     opacity: 1;
   }
 `
