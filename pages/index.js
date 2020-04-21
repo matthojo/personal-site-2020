@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
-import theme from './theme'
+import theme from '../theme'
 import { GlobalStyles } from '../components/GlobalStyles'
 import { Container, Flex, Section } from '../components/Layout'
 import { Header } from '../components/Header'
