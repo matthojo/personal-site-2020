@@ -13,8 +13,8 @@ import { Client } from '../components/Client'
 const App = props => (
   <ThemeProvider theme={theme}>
     <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>Matthew Harrison-Jones | Software Engineer</title>
+      <link rel="icon" href="/logo.svg" />
     </Head>
     <GlobalStyles />
       <main>
