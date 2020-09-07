@@ -13,8 +13,8 @@ export default {
     grey: '#e5e5e5',
     orange: '#FF6C11',
     gold: '#fca311',
-    green: '#00c561',
-    darkGreen: '#039c4f',
+    green: '#007303',
+    darkGreen: '#09540b',
     purple: '#5e00c5',
     white: '#FFFFFF',
     midnight: '#14213d'

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { color, space } from 'styled-system'
 
 import condeLogo from './logos/conde.svg'
@@ -59,24 +59,13 @@ const clientsBranding = {
   }
 }
 
-const flicker = keyframes`
-  0%    { opacity: 1;   }
-  3%    { opacity: 0.4; }
-  6%    { opacity: 1;   }
-  7%    { opacity: 0.4; }
-  8%    { opacity: 1;   }
-  9%    { opacity: 0.4; }
-  10%   { opacity: 1;   }
-  100%  { opacity: 1;   }
-`
-
 const ClientLogo = styled.div`
   width: 100%;
 
   svg {
     width: 100%;
     fill: ${({ theme }) => theme.colors.white };
-    opacity: 0.5;
+    opacity: 0.8;
     transition: 0.2s;
   }
 
@@ -97,7 +86,7 @@ export const Client = ({
 }) => {
   const Logo = clientsBranding[client].logo
   return (
-  <ClientLink href={clientsBranding[client].url} p={4}>
+  <ClientLink href={clientsBranding[client].url} p={4} aria-label={`Go to ${clientsBranding[client].title}`}>
     <ClientLogo>
       <Logo />
     </ClientLogo>
