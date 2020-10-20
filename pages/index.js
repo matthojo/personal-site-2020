@@ -33,33 +33,19 @@ const App = props => (
           </Container>
         </Header>
 
-        <Section bg={theme.colors.purple}>
+        <Section bg={theme.colors.purple} aria-label="Previous clients">
           <Container>
             <Flex flexDirection='row' flexWrap='wrap' justifyContent='center' alignItems='center'>
               <Client client="vogue" />
               <Client client="conde" />
               <Client client="stickermule" />
-              {/* <Client client="urbanSim">
-                <h2>UrbanSim</h2>
-                <p>At Condé Nast I am part of the Audience Growth team. Working on and experimenting with new ideas to grow user retention and experience.</p>
-              </Client> */}
+              {/* <Client client="urbanSim" /> */}
               <Client client="riotGames" />
               <Client client="ghost" />
               <Client client="wsj" />
               <Client client="stylist" />
               <Client client="ribaj" />
               <Client client="teachactive" />
-            </Flex>
-          </Container>
-        </Section>
-        <Section>
-          <Container pt={4}>
-            <Flex flexDirection='row' flexWrap='wrap' justifyContent='center' alignItems='center'>
-              <Button as="a" href="mailto:matt@matthojo.co.uk">
-                <strong>
-                  Available
-                </strong> from Q4 2020
-              </Button>
             </Flex>
           </Container>
         </Section>
