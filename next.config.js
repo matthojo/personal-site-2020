@@ -11,6 +11,7 @@ module.exports = {
     return config
   },
   experimental: {
+    css: false,
     i18n: {
       locales: ['en'],
       defaultLocale: 'en'

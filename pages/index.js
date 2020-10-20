@@ -10,6 +10,10 @@ import { H1, P, A, Ul, Li } from '../components/Typography'
 import { Button } from '../components/Button'
 import { Client } from '../components/Client'
 
+export const config = {
+  unstable_runtimeJS: false
+}
+
 const App = props => (
   <ThemeProvider theme={theme}>
     <Head>
