@@ -9,5 +9,11 @@ module.exports = {
     });
 
     return config
+  },
+  experimental: {
+    i18n: {
+      locales: ['en'],
+      defaultLocale: 'en'
+    }
   }
 }
