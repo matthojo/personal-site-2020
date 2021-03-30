@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import { color, flexbox, space, typography } from 'styled-system'
+import { background, color, flexbox, space, typography } from 'styled-system'
 
 export const Flex = styled.div`
   display: flex;
   ${flexbox}
 `
 export const Section = styled.section`
+  ${background}
   ${color}
   ${space}
 `

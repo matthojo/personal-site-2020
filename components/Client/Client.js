@@ -67,6 +67,8 @@ const ClientLogo = styled.div`
     fill: ${({ theme }) => theme.colors.white };
     opacity: 0.8;
     transition: 0.2s;
+    filter: drop-shadow(0px 0px 2px #222);
+    -webkit-transform: translateZ(0);
   }
 
   &:hover svg {
