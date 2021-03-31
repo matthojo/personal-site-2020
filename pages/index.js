@@ -37,7 +37,7 @@ const App = props => (
           </Container>
         </Header>
 
-        <Section bg={theme.colors.purple} background="linear-gradient(243deg, rgba(249,158,248,1) 0%, rgba(135,31,209,1) 33%, rgba(6,232,226,1) 100%)" aria-label="Previous clients">
+        <Section bg={theme.colors.purple} background="linear-gradient(243deg, rgba(249,158,248,1) 0%, rgba(135,31,209,1) 33%, rgba(135,31,209,1) 66%, rgba(249,158,248,1) 100%)" aria-label="Previous clients">
           <Container>
             <Flex flexDirection='row' flexWrap='wrap' justifyContent='center' alignItems='center'>
               <Client client="vogue" />
