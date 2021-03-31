@@ -4,11 +4,15 @@ import { space } from 'styled-system'
 export const H1 = styled.h1`
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: calc(1ex / 0.42);
+  margin: calc(1ex / 0.42) 0;
   ${space};
 `
 
 export const P = styled.p`
   font-size: 1.1rem;
+  line-height: calc(1ex / 0.32);
+  margin: calc(1ex / 0.32) 0;
 `
 
 export const A = styled.a`

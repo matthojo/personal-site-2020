@@ -27,7 +27,7 @@ const App = props => (
             <Logo width='75px' height='75px' src='/logo.svg' alt="HJ Digital Logo" />
             <H1 mb={3} >I'm <strong>Matthew Harrison-Jones (Matt Hojo)</strong>, an experienced Software Engineer based in North Wales, UK.</H1>
             <P>
-              My work focuses on front-end development and user experience, working with Javascript/Typescript, Node.js and React.
+              My work focuses on front-end development and user experience, working primarily with JavaScript, TypeScript, Node.js and React.
               I have experience working with some of the world's leading online organisations, helping them deliver exciting ideas to a global audience of customers.
               I'm passionate about web performance and accessibility.
             </P>
