@@ -64,7 +64,7 @@ const ClientLogo = styled.div`
 
   svg {
     width: 100%;
-    fill: ${({ theme }) => theme.colors.white };
+    fill: ${({ theme }) => theme.components.client };
     opacity: 0.8;
     transition: 0.2s;
     filter: drop-shadow(0px 0px 2px #222);

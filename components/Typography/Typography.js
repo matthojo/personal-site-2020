@@ -20,12 +20,12 @@ export const A = styled.a`
   text-decoration: none;
   color: inherit;
   padding-bottom: ${({ theme }) => theme.space[1] }px;
-  box-shadow: inset 0 -1px 0 0 ${({ theme }) => theme.colors.purple };
+  box-shadow: inset 0 -1px 0 0 ${({ theme }) => theme.components.link };
   transition: 0.2s;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.purple };
-    box-shadow: inset 0 -3px 0 0 ${({ theme }) => theme.colors.purple };
+    color: ${({ theme }) => theme.components.link };
+    box-shadow: inset 0 -3px 0 0 ${({ theme }) => theme.components.link };
   }
 `
 

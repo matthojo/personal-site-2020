@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
-import theme from '../theme'
+import { light, dark } from '../theme'
 import { GlobalStyles } from '../components/GlobalStyles'
 import { Container, Flex, Section } from '../components/Layout'
 import { Header } from '../components/Header'
 import { Logo } from '../components/Logo'
+import HJ from '../components/Logo/logo.svg'
 import { H1, P, A, Ul, Li } from '../components/Typography'
 import { Button } from '../components/Button'
 import { Client } from '../components/Client'
@@ -14,8 +15,20 @@ export const config = {
   unstable_runtimeJS: false
 }
 
-const App = props => (
-  <ThemeProvider theme={theme}>
+const App = props => {
+  const [theme, setTheme] = useState('light');
+
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light')
+  }
+
+  useEffect( () => {
+    document.querySelector("body").setAttribute("class", "");
+    document.querySelector("body").classList.add(theme)
+  }, [theme]);
+  
+  return (
+  <ThemeProvider theme={theme === 'light' ? light : dark}>
     <Head>
       <title>Matthew Harrison-Jones | Software Engineer</title>
       <link rel="icon" href="/logo.svg" />
@@ -23,8 +36,11 @@ const App = props => (
     <GlobalStyles />
       <main>
         <Header mb={4}>
-          <Container px={[4, 4, 0]} >
-            <Logo width='75px' height='75px' src='/logo.svg' alt="HJ Digital Logo" />
+          <Container px={[4, 4, 0]} py={[5, 2]}>
+            <Logo width='75px' height='75px'>
+              <HJ/>
+            </Logo>
+            <button onClick={themeToggler} >Theme toggle</button>
             <H1 mb={3} >I'm <strong>Matthew Harrison-Jones (Matt Hojo)</strong>, an experienced Software Engineer based in North Wales, UK.</H1>
             <P>
               My work focuses on front-end development and user experience, working primarily with JavaScript, TypeScript, Node.js and React.
@@ -37,7 +53,7 @@ const App = props => (
           </Container>
         </Header>
 
-        <Section bg={theme.colors.purple} background="linear-gradient(243deg, rgba(249,158,248,1) 0%, rgba(135,31,209,1) 33%, rgba(135,31,209,1) 66%, rgba(249,158,248,1) 100%)" aria-label="Previous clients">
+        <Section background="linear-gradient(243deg, rgba(249,158,248,1) 0%, rgba(135,31,209,1) 33%, rgba(135,31,209,1) 66%, rgba(249,158,248,1) 100%)" aria-label="Previous clients" className="retroness">
           <Container>
             <Flex flexDirection='row' flexWrap='wrap' justifyContent='center' alignItems='center'>
               <Client client="vogue" />
@@ -67,6 +83,6 @@ const App = props => (
         </footer>
       </main>
   </ThemeProvider>
-)
+)}
 
 export default App
