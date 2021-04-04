@@ -9,6 +9,7 @@ export const Logo = styled('div')`
     position: relative;
     z-index: 2;
     width: 100%;
+    height: 80px;
     fill: ${({ theme }) => theme.components.logo };
   }
 

@@ -4,6 +4,7 @@ import { background, color, flexbox, space, typography } from 'styled-system'
 export const Flex = styled.div`
   display: flex;
   ${flexbox}
+  ${space}
 `
 export const Section = styled.section`
   ${background}
